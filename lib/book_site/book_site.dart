@@ -664,13 +664,14 @@ class BookSite {
     // 1 302调整到书籍详情了，手动默认章节地址为当前地址
 //    Map siteRule = bookSource[0];
     //一共54个书源
-//    print(siteRule);
+    print(siteRule);
 
     String bookListJSON =
         await runOnIsoLate(this, 'parseBookListByRoleInBack', {
       'text': text,
       'siteRule': json.encode(siteRule),
     });
+    print(bookListJSON);
     return json.decode(bookListJSON);
   }
 

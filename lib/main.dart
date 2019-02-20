@@ -82,6 +82,7 @@ class MyAppState extends State<MyApp> {
 //    print("1111111111111111111111111");
 
     return new MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: '书探',
       theme: new ThemeData(
 //        primarySwatch: Colors.blue,

@@ -106,6 +106,7 @@ class MyBookListState extends State<MyBookList> {
     print("build 书籍列表");
     final ThemeData theme = Theme.of(context);
     bookList.sort((b, a) => (a['updateTime'] ?? 0) - (b['updateTime'] ?? 0));
+    print(bookList.length);
     return Container(
       child: RefreshIndicator(
         color: theme.primaryColor,
@@ -320,6 +321,7 @@ class MyBookListState extends State<MyBookList> {
     List<Map> list = await database.rawQuery(
         'SELECT * FROM Book where active=? order by updateTime desc', [1]);
     list = list.map((it) {
+      print(it['chapters']);
       return {
         'id': it['id'],
         'name': it['name'],

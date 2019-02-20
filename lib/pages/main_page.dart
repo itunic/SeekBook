@@ -34,6 +34,7 @@ class _MainPageState extends State<MainPage> {
     Widget scaffold = Scaffold(
       appBar: HomePageTopBar(
         onRightButtonClick: () {
+          print("111");
           myBookListKey.currentState.loadData();
         },
       ),
